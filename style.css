@@ -14,16 +14,22 @@ a {
     text-decoration: none;
 }
 
+.button_place {
+    position: absolute;
+    opacity:0; 
+}
+
 img {
     max-width: 100%;
   }
 
+.special_img {
+    display: none;
+}
+
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
 }
 
 /* header */
@@ -61,7 +67,7 @@ img {
 
 .brand_info {
     float: right;
-    width: 50vw;
+    width: 50%;
     display: flex;
     align-self: center;
     padding-top: 290px;
@@ -72,7 +78,7 @@ img {
 
 .brand_image {
     float: left;
-    width: 50vw;
+    width: 50%;
 }
 
 .brand_image {
@@ -181,6 +187,7 @@ img {
 
 .content_photo_title {
     color: #F16D7F;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -220,7 +227,7 @@ img {
     gap: 30px;
 }
 
-.item_image_special {
+.special_image {
     background-color: #F7E4E2;
     display: flex;
     justify-content: center;
@@ -326,5 +333,188 @@ img {
     .main_title {
         display: flex;
         flex-direction: column;
+    }
+
+    .long_picture{
+        grid-column: span 2;
+    }
+}
+
+
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .header {
+        padding-left: calc(50% - 156px);
+        padding-right: calc(50% - 156px);
+    }
+
+    .left_nav {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    .right_nav {
+        margin-top: 25px;
+        margin-bottom: 26px;
+    }
+
+    .special_img {
+        display: initial;
+    }
+
+    .default_nav_img {
+        display: none;
+    }
+
+    
+
+    .brand_image {
+        display: none;
+    }
+    .brand_info {
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        float: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .top {
+        padding-left: calc(50% - 131.5px);
+        padding-right: calc(50% - 131.5px);
+        margin: auto;
+        min-height: 363px;
+    }
+
+    .top_title {
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        font-weight: bold;
+    }
+
+    .top_subtitle {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .top_text {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .content_photo.center {
+        padding-left: calc(50% - 171.5px);
+        padding-right: calc(50% - 171.5px);
+    }
+
+    .content_photo {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 64px;
+    }
+
+    .content_photo1 {
+        height: 247px;
+    }
+
+    .content_photo2 {
+        height: 249px;
+    }
+
+    .content_photo3 {
+        height: 248px;
+    }
+
+    .content_photo4 {
+        height: 111px;
+    }
+
+    .main_title {
+        margin-bottom: 64px;
+    }
+
+    .content_items.center {
+        padding-left: calc(50% - 179.5px);
+        padding-right: calc(50% - 179.5px);
+    }
+
+    .content_items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .content_bgc {
+        background-color: #F8F8F8;
+
+    }
+
+    .item_text {
+        padding-left: 16px;
+        padding-top: 24px;
+        padding-bottom: 20px;
+        padding-right: 28px;
+        
+    }
+
+
+    .pseudo {
+        position: relative;
+    }
+
+
+    .item_image:hover {
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5); 
+    }
+
+    .pseudo:hover .button_place {
+        opacity:1; 
+        top: 44%;
+        left: 32%;
+    }
+
+    .button_basket {
+        display: flex;
+        align-items: center;
+        border-color: #FFFFFF;
+        background: none;
+    }
+    
+    .button_place {
+        position: absolute;
+        opacity:0; 
+    }
+
+    .basket {
+        padding-top: 11.2px;
+        padding-bottom: 8.7px;
+        padding-left: 13.5px;
+    }
+
+    .title_for_basket {
+        margin-left: 11.1px;
+        padding-right: 16.3px;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        
+    }
+
+    .footer_button {
+        margin-top: 40.6px;
+        margin-bottom: 85px;
     }
 }
